@@ -43,4 +43,4 @@ And finally, you will find in the report folder all the elements necessary for t
 ie photos, videos and the report itself.
 </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OgMLn4ib6k8" frameborder="0" allowfullscreen></iframe>
+[![Alt text for your video](https://img.youtube.com/vi/OgMLn4ib6k8/0.jpg)](https://www.youtube.com/watch?v=OgMLn4ib6k8)
