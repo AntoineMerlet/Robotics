@@ -6,50 +6,41 @@ from math import pi
 
 class BackAndForth():
     def __init__(self):
-        # Give the node a name
+        # Init the node. Not anonymous cbecause only one 
         rospy.init_node('back_and_forth', anonymous=False)
 
-        # Set rospy to execute a shutdown function when exiting       
+        # When shutdown, perfoms launch the shutdown function below      
         rospy.on_shutdown(self.shutdown)
         
-        # Publisher to control the robot's speed
+        # This is the publisher to the cmd_vel
         self.cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
         
-        # How fast will we update the robot's movement?
+        # Frequency
         rate = 50
-        
-        # Set the equivalent ROS rate variable
         r = rospy.Rate(rate)
         
-        # Set the forward linear speed to 0.2 meters per second 
+        # Set our variables in meters and radians
         linear_speed = 0.2
-        
-        # Set the travel distance to 1.0 meters
         goal_distance = 1.0
-        
-        # How long should it take us to get there?
-        linear_duration = goal_distance / linear_speed
-        
-        # Set the rotation speed to 1.0 radians per second
         angular_speed = 1.0
-        
-        # Set the rotation angle to Pi radians (180 degrees)
         goal_angle = pi*2
         
-        # How long should it take to rotate?
+        # Travel time estimations
+        linear_duration = goal_distance / linear_speed
         angular_duration = goal_angle / angular_speed
-     
-        # Loop through the two legs of the trip  
+        
+        #Perfomed twice to have a back and forth
         for i in range(2):
-            # Initialize the movement command
+            # Init the Twist message
             move_cmd = Twist()
             
-            # Set the forward speed
+            # Init the linear speed
             move_cmd.linear.x = linear_speed
             
-            # Move forward for a time to go the desired distance
+            # Normalizing the travel duration according to the frequency
             ticks = int(linear_duration * rate)
             
+            # Perform movement
             for t in range(ticks):
                 self.cmd_vel.publish(move_cmd)
                 r.sleep()
@@ -59,24 +50,24 @@ class BackAndForth():
             self.cmd_vel.publish(move_cmd)
             rospy.sleep(1)
             
-            # Now rotate left roughly 180 degrees  
             
-            # Set the angular speed
+            # Init the angular speed
             move_cmd.angular.z = angular_speed
 
-            # Rotate for a time to go 180 degrees
+            # Normalizing the rotate duration according to the frequency
             ticks = int(goal_angle * rate)
             
+            # Perform Rotation
             for t in range(ticks):           
                 self.cmd_vel.publish(move_cmd)
                 r.sleep()
                 
-            # Stop the robot before the next leg
+            # Publish an empty message to stop the robot for a few moments before going back
             move_cmd = Twist()
             self.cmd_vel.publish(move_cmd)
             rospy.sleep(1)    
             
-        # Stop the robot
+        # Back and forth finish, publishing empty message to stop the robot
         self.cmd_vel.publish(Twist())
         
     def shutdown(self):
