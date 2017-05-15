@@ -23,6 +23,11 @@ Indeed, we will find there the files thanks to which we will be able to call the
 Once Launchfile is launched, the corresponding script will be used for the robot's movement.
 </p>
 
+How to use them?
+[![Demo video](https://img.youtube.com/vi/OgMLn4ib6k8/0.jpg)](https://www.youtube.com/watch?v=OgMLn4ib6k8)
+
+
+
 <h2>The Map</h2>
 <p>
 The folder named Map contains a series of different attempts to create a map using the robot and the lidar.
@@ -37,10 +42,14 @@ Indeed, these graphs model all the links that exist between the nodes of compila
 files used in the good operation of the robot for a given action.
 </p>
 
-<h2>Report</h2>
+<h2>Report and presentation</h2>
 <p>
-And finally, you will find in the report folder all the elements necessary for the good realization of it, 
+And finally, you will find in the report folder and the presentation one, all the elements necessary for the good realization of them, 
 ie photos, videos and the report itself.
-</p>
 
-[![Alt text for your video](https://img.youtube.com/vi/OgMLn4ib6k8/0.jpg)](https://www.youtube.com/watch?v=OgMLn4ib6k8)
+Just after are some videos of some basic movements of the robot whih are possible to do :
+[![Demo video](https://img.youtube.com/vi/FClwrSILzI4/0.jpg)](https://youtu.be/FClwrSILzI4)
+[![Demo video](https://img.youtube.com/vi/ii4MWwOrxws/0.jpg)](https://youtu.be/ii4MWwOrxws)
+[![Demo video](https://img.youtube.com/vi/kcxKbuMNRy4/0.jpg)](https://youtu.be/kcxKbuMNRy4)
+
+</p>
