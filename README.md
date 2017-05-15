@@ -47,7 +47,7 @@ files used in the good operation of the robot for a given action.
 And finally, you will find in the report folder and the presentation one, all the elements necessary for the good realization of them, 
 ie photos, videos and the report itself.
 
-Just after are some videos of some basic movements of the robot whih are possible to do :
+Just after are some videos of some basic movements of the robot which are possible to do :
 [![Demo video](https://img.youtube.com/vi/FClwrSILzI4/0.jpg)](https://youtu.be/FClwrSILzI4)
 [![Demo video](https://img.youtube.com/vi/ii4MWwOrxws/0.jpg)](https://youtu.be/ii4MWwOrxws)
 [![Demo video](https://img.youtube.com/vi/kcxKbuMNRy4/0.jpg)](https://youtu.be/kcxKbuMNRy4)
