@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {B}Simple motions, Twist and Odometry }{9}{section*.12}
 \contentsline {subsection}{\numberline {C}Adding and controlling sensors}{17}{section*.13}
 \contentsline {subsection}{\numberline {D}ACML and Gmapping}{19}{section*.14}
-\contentsline {section}{\numberline {IV}Merging TurtleBot and PhantomX Arm Pincher}{21}{section*.15}
-\contentsline {section}{\numberline {V}Challenges encountered}{21}{section*.16}
-\contentsline {section}{\numberline {VI}Conclusion}{22}{section*.17}
-\contentsline {section}{\numberline {VII}Appendix}{22}{section*.18}
+\contentsline {section}{\numberline {IV}Merging TurtleBot and PhantomX Arm Pincher}{20}{section*.15}
+\contentsline {section}{\numberline {V}Challenges encountered}{24}{section*.16}
+\contentsline {section}{\numberline {VI}Conclusion}{25}{section*.17}
+\contentsline {section}{\numberline {VII}Appendix}{26}{section*.18}

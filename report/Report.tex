@@ -371,7 +371,7 @@ This method is giving totally different results, shown below:
 We are now able to precisely move the robot in a straight line, and make it rotate accuratley. We can then try to change the angles and the number of loop to perform geometrical-shaped movement. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=8cm]{square.png}
+	\includegraphics[width=8cm]{square.png}
 	\caption{Square Movement}
 	\label{fig: Square Movement}    
 \end{figure}
@@ -381,7 +381,7 @@ Previously, when were giving a distance to travel. An other way to control the r
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=8cm]{markers.png}
+	\includegraphics[width=8cm]{markers.png}
 	\caption{Curve Movement}
 	\label{fig: Markers}    
 \end{figure} 
@@ -400,7 +400,7 @@ Using Rviz and a Joystick, we are then able to visualize the feedback given by t
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=8cm]{RPLIDAR.png}
+	\includegraphics[width=8cm]{RPLIDAR.png}
 	\caption{RPLIDAR data}
 	\label{fig: RPLIDAR}    
 \end{figure} 
@@ -429,7 +429,7 @@ The very last step is to extract the map from the bag file by using the followin
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=8cm]{finalmap.png}
+	\includegraphics[width=8cm]{finalmap.png}
 	\caption{Map of the laboratory}
 	\label{fig: map}    
 \end{figure} 
@@ -438,9 +438,50 @@ This map can be modified manually to correct any imprecision. As it is, the prev
 
 \section{Merging TurtleBot and PhantomX Arm Pincher}
 
-TODO
 Previously, we learned the basics of ROS, going from simple movement to map creation and automated pathfinding. The next step is to try to bring something new to ROS, or at least to our own TurtleBot: a arm.
-We produced a design to fix the PhantomX on the TurtleBot
+We produced a design to fix the PhantomX on the TurtleBot. For this part, we really took our time. We are now trying something totally new, and we will have to modify both the TurtleBot and the Arm, which a bit costly.
+First, we worked on the porisionning on the arm on the TurtleBot. We could not place the arm to high, other it would limit its action range, and it would be impossible to pick up items on the floor. The second option we though about was to move the Kinect, and place the PhantomX at its old place, but then the Kinect would not be looking in at the `front' of the robot.
+We finally chose to place the Arm at the very front of the TurtleBot, on the same layer than the Kinect. The main disadvantage here is that is totally bloques the kinect field of vue. As we are not using the Kinect yet, this is the best option for the time beeing, by a new design might need to be thought about in order to make the Kinect usable again. 
+Below is represented the positionning of the arm on the TurtleBot, as well as its amplitude. We can see that, by changing the home position of the robot and its first `working position', we can place it under the laptop layer when not use, and move it to a betetr position for when used. We also remarke that the arm can pick up items on the floor which are close to the TurtleBot. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{armFront.png}
+	\caption{Posirtion of the arm on the TurtleBot}
+	\label{fig: map}    
+\end{figure} 
+
+Now that the positionning is defined, we need a way to fix the arm to the robot. The layer of the kinect is constitud by a wooden plate, pierced in some places. We chose to add a small piece of wooden plate on top of it, that we would pierce by ouserlves to fit with the already existing holes, as well as some new ones to hold the arm. 
+The arm is then divided in two parts: the main part of the arm (all the servos) is placed on the kinect layer, while the arduino board is placed one layer below. By Using such a positionning, we are putting the arduino board in a safe place, hidden from possible damages.
+Below is presented our schematic of the wodden plate that needs to be added placed on the TurtbleBot.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{plate.png}
+	\caption{The wooden plate to be added to the turtlebot}
+	\label{fig: plate}    
+\end{figure} 
+
+Once sure about the design, we used the drill available at the laboratory to pierce our plate according to the schematics. To make it easier for use, we directly transferred the schemetics onto the plate to pierce:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{wood.jpg}
+	\caption{designed transfered on the wooden plate}
+	\label{fig: wood design}    
+\end{figure} 
+
+Onced drilled, we easily assambled the plate, the TurtleBot and the PhantomX. Below is presented the result.
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{armfixed.png}
+	\caption{Arm on the turtleBot}
+	\label{fig: wood design}    
+\end{figure} 
+
+ We then realized that we focued on the design of the plate, but we totally forgot about the alimentation management. In fatc, the arduino board can be used alone with a 5V USB cable, but the servos of the arm need more power need 12V and 5 Ampers to work.
+Fortunately, the Turtlebot is equipped with some voltage ouput at its back. But they were all taken, by the router and the Kinect. After discussion with our professor, they were able to find a cable for us allowing to regroup the alimentation of the router and the alimentation of the arduino board.
+
+After the merging was done, we tried to design a small application to show how we can use the PhantomX. Unfortunately, we did not have enough time to ROSify totally the arm. On only software work on this part was to change the behavior of the arm of launch. In fact, normally all the servos should go to their center position as soon as the voltage input is sufficient. Taking such a position in the current environnement would make it crash into the turtleBot laptop layer. So we set a new hom position, placing the arm towards the center of the TurtleBot, and a working position, making the arm fating towards the front of the TurtleBot. This was perfomed by changing values in the arduino code given gy with arm. The modifications are not high level, bu it took use some time to review the code from TrossenRobotics and figure out what needed to be changed.
 
 \section{Challenges encountered}
 Greatest challenge of all: we were not fortunate with the Hardware. We faced several malfunctions: 
@@ -462,7 +503,12 @@ Overall, we improved our working method during the project, and were able to spe
 \section{Conclusion}
 
 During this project, we put at use our knowledge of ROS acquired during the lessons. We were able to understand and modify Pythons scripts to move the robot, and we are now able to create basic ones by oursleves. From all our pratical our during these 9 weeks, we learn a lot about the theory( and strengthened the previously acquired one) , such as the management of the cmd\_vel multiplexer or the use of Rviz. We went from moving the robot ina straight line to automatic robot navigation in a previously set environnement. Our project is now finished, but the foundations laid down by the merging of the PhantomX Arm Pincher with the TurtleBot can be a solid base for future projects (Asynchronous control of the robot and the arm for example). This project really deepened our knowledge about ROS, but also regarding project managemend, teamwork and inter-team collaboration. 
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=8cm]{RobotFinal.png}
+	\caption{Our TurtleBot at the end of the project}
+	\label{fig: fiianl}    
+\end{figure} 
 \section{Appendix}
 All our source code for the project, this report, and our defence can be found on \href{https://github.com/AntoineMerlet/Robotics}{Github} and on our open \href{https://drive.google.com/open?id=0B8c8pooKt7IPRXBxaTRpV3JIWFU}{Google Drive}.
 All the lessons used for this project can be found \href{https://drive.google.com/open?id=0B8c8pooKt7IPTnRKSmtnVlMtTHc}{here}. We do not own any of it, all the credits goes to the author mentionned in each file.

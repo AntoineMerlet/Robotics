@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.30)  16 MAY 2017 02:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.30)  16 MAY 2017 07:52
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -882,6 +882,12 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 95.
 
 LaTeX Warning: Label `fig:example' multiply defined.
 
+
+LaTeX Warning: Label `fig: map' multiply defined.
+
+
+LaTeX Warning: Label `fig: wood design' multiply defined.
+
 )
 \openout1 = `Report.aux'.
 
@@ -995,22 +1001,22 @@ Overfull \hbox (5.95001pt too wide) detected at line 16
 
 
 Overfull \hbox (5.95001pt too wide) detected at line 17
- \OT1/cmr/m/n/10.95 21
+ \OT1/cmr/m/n/10.95 20
  []
 
 
 Overfull \hbox (5.95001pt too wide) detected at line 18
- \OT1/cmr/m/n/10.95 21
+ \OT1/cmr/m/n/10.95 24
  []
 
 
 Overfull \hbox (5.95001pt too wide) detected at line 19
- \OT1/cmr/m/n/10.95 22
+ \OT1/cmr/m/n/10.95 25
  []
 
 
 Overfull \hbox (5.95001pt too wide) detected at line 20
- \OT1/cmr/m/n/10.95 22
+ \OT1/cmr/m/n/10.95 25
  []
 
 )
@@ -1105,32 +1111,63 @@ File: square.png Graphic file (type png)
 
 <use square.png>
 Package pdftex.def Info: square.png used on input line 374.
-(pdftex.def)             Requested size: 299.68277pt x 227.62204pt.
- [15 <./BackOdom1.png> <./BackOdom2.png>]
-<markers.png, id=325, 426.09187pt x 427.5975pt>
+(pdftex.def)             Requested size: 227.62204pt x 172.88785pt.
+ [15 <./BackOdom1.png> <./BackOdom2.png> <./square.png>]
+<markers.png, id=326, 426.09187pt x 427.5975pt>
 File: markers.png Graphic file (type png)
  <use markers.png>
 Package pdftex.def Info: markers.png used on input line 384.
-(pdftex.def)             Requested size: 226.81586pt x 227.62204pt.
- [16 <./square.png>] (remap_rplidar_minimal.launch [17 <./markers.png>])
-<RPLIDAR.png, id=339, 450.9347pt x 428.35031pt>
+(pdftex.def)             Requested size: 227.62204pt x 228.4329pt.
+ [16 <./markers.png>] (remap_rplidar_minimal.launch [17])
+<RPLIDAR.png, id=351, 450.9347pt x 428.35031pt>
 File: RPLIDAR.png Graphic file (type png)
  <use RPLIDAR.png>
 Package pdftex.def Info: RPLIDAR.png used on input line 403.
-(pdftex.def)             Requested size: 239.62039pt x 227.62204pt.
- [18] [19 <./RPLIDAR.png>] <finalmap.png, id=371, 648.17157pt x 546.54187pt>
+(pdftex.def)             Requested size: 227.62204pt x 216.22696pt.
+ [18 <./RPLIDAR.png>] <finalmap.png, id=366, 648.17157pt x 546.54187pt>
 File: finalmap.png Graphic file (type png)
-
-<use finalmap.png>
+ <use finalmap.png>
 Package pdftex.def Info: finalmap.png used on input line 432.
-(pdftex.def)             Requested size: 269.94554pt x 227.62204pt.
- [20 <./finalmap.png>] [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
- [22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
+(pdftex.def)             Requested size: 227.62204pt x 191.93466pt.
+
+[19] [20 <./finalmap.png>] <armFront.png, id=377, 636.12656pt x 568.37344pt>
+File: armFront.png Graphic file (type png)
+
+<use armFront.png>
+Package pdftex.def Info: armFront.png used on input line 449.
+(pdftex.def)             Requested size: 284.52756pt x 254.22195pt.
+ <plate.png, id=378, 791.20593pt x 523.9575pt>
+File: plate.png Graphic file (type png)
+
+<use plate.png>
+Package pdftex.def Info: plate.png used on input line 460.
+(pdftex.def)             Requested size: 284.52756pt x 188.42468pt.
+ [21 <./armFront.png>]
+<wood.jpg, id=384, 2312.64pt x 2185.16376pt>
+File: wood.jpg Graphic file (type jpg)
+ <use wood.jpg>
+Package pdftex.def Info: wood.jpg used on input line 468.
+(pdftex.def)             Requested size: 284.52756pt x 268.84357pt.
+ [22 <./plate.png>]
+<armfixed.png, id=390, 388.45125pt x 319.1925pt>
+File: armfixed.png Graphic file (type png)
+ <use armfixed.png>
+Package pdftex.def Info: armfixed.png used on input line 476.
+(pdftex.def)             Requested size: 284.52756pt x 233.80246pt.
+ [23 <./wood.jpg>] [24 <./armfixed.png>] <RobotFinal.png, id=401, 1734.48pt x 1
+680.2775pt>
+File: RobotFinal.png Graphic file (type png)
+
+<use RobotFinal.png>
+Package pdftex.def Info: RobotFinal.png used on input line 508.
+(pdftex.def)             Requested size: 234.96515pt x 227.62204pt.
+ [25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 519.
+ [26 <./RobotFinal.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 519.
  (Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 519.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 519.
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: E7814D1F46886508905BD0A1168FCAC6;1100.
 
@@ -1139,10 +1176,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12922 strings out of 493333
- 184338 string characters out of 3139184
- 446037 words of memory out of 3000000
- 16042 multiletter control sequences out of 15000+200000
+ 12960 strings out of 493333
+ 184835 string characters out of 3139184
+ 421232 words of memory out of 3000000
+ 16066 multiletter control sequences out of 15000+200000
  12425 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,11n,51p,1225b,2039s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1159,9 +1196,8 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 txfonts/t1xbtt.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/t1xt
 t.pfb>
-Output written on Report.pdf (22 pages, 11362210 bytes).
+Output written on Report.pdf (26 pages, 20065928 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 214 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 511 PDF objects out of 1000 (max. 8388607)
+ 223 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
