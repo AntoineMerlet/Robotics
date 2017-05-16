@@ -1,31 +1,18 @@
 \BOOKMARK [1][-]{section*.1}{Contents}{}% 1
-\BOOKMARK [1][-]{section*.2}{BRAINSTORM}{}% 2
-\BOOKMARK [1][-]{section*.3}{Presentation of the robot}{}% 3
-\BOOKMARK [1][-]{section*.4}{How to control a TurtleBot}{}% 4
-\BOOKMARK [2][-]{section*.5}{Workspace and network}{section*.4}% 5
-\BOOKMARK [2][-]{section*.6}{Topics and nodes}{section*.4}% 6
-\BOOKMARK [2][-]{section*.7}{Package}{section*.4}% 7
-\BOOKMARK [2][-]{section*.8}{Script}{section*.4}% 8
-\BOOKMARK [2][-]{section*.9}{Launch files}{section*.4}% 9
-\BOOKMARK [2][-]{section*.10}{Bag files}{section*.4}% 10
-\BOOKMARK [1][-]{section*.11}{Our project}{}% 11
-\BOOKMARK [2][-]{section*.12}{Purpose}{section*.11}% 12
-\BOOKMARK [2][-]{section*.13}{Simple motions, Twist and Odometry}{section*.11}% 13
-\BOOKMARK [2][-]{section*.14}{Adding and controlling sensors}{section*.11}% 14
-\BOOKMARK [2][-]{section*.15}{SLAM and ACML}{section*.11}% 15
-\BOOKMARK [1][-]{section*.16}{Merging TurtleBot and PhantomX Arm Pincher}{}% 16
-\BOOKMARK [1][-]{section*.17}{Challenges encountered}{}% 17
-\BOOKMARK [2][-]{section*.18}{Hardware malfunctions}{section*.17}% 18
-\BOOKMARK [2][-]{section*.19}{Python}{section*.17}% 19
-\BOOKMARK [2][-]{section*.20}{Debugging the TurtleBot}{section*.17}% 20
-\BOOKMARK [1][-]{section*.21}{Conclusion}{}% 21
-\BOOKMARK [1][-]{section*.22}{References}{}% 22
-\BOOKMARK [1][-]{section*.23}{Appendix}{}% 23
-\BOOKMARK [1][-]{section*.24}{OLD STUFF}{}% 24
-\BOOKMARK [1][-]{section*.25}{Challenges}{}% 25
-\BOOKMARK [2][-]{section*.26}{Twist}{section*.25}% 26
-\BOOKMARK [2][-]{section*.27}{Odometry}{section*.25}% 27
-\BOOKMARK [2][-]{section*.28}{Basic Moves}{section*.25}% 28
-\BOOKMARK [1][-]{section*.29}{ROSification}{}% 29
-\BOOKMARK [2][-]{section*.30}{}{section*.29}% 30
-\BOOKMARK [2][-]{section*.31}{}{section*.29}% 31
+\BOOKMARK [1][-]{section*.2}{Presentation of the robot}{}% 2
+\BOOKMARK [1][-]{section*.3}{How to control a TurtleBot}{}% 3
+\BOOKMARK [2][-]{section*.4}{Workspace and network}{section*.3}% 4
+\BOOKMARK [2][-]{section*.5}{Topics and nodes}{section*.3}% 5
+\BOOKMARK [2][-]{section*.6}{Package}{section*.3}% 6
+\BOOKMARK [2][-]{section*.7}{Script}{section*.3}% 7
+\BOOKMARK [2][-]{section*.8}{Launch files}{section*.3}% 8
+\BOOKMARK [2][-]{section*.9}{Bag files}{section*.3}% 9
+\BOOKMARK [1][-]{section*.10}{Our project}{}% 10
+\BOOKMARK [2][-]{section*.11}{Purpose}{section*.10}% 11
+\BOOKMARK [2][-]{section*.12}{Simple motions, Twist and Odometry }{section*.10}% 12
+\BOOKMARK [2][-]{section*.13}{Adding and controlling sensors}{section*.10}% 13
+\BOOKMARK [2][-]{section*.14}{ACML and Gmapping}{section*.10}% 14
+\BOOKMARK [1][-]{section*.15}{Merging TurtleBot and PhantomX Arm Pincher}{}% 15
+\BOOKMARK [1][-]{section*.16}{Challenges encountered}{}% 16
+\BOOKMARK [1][-]{section*.17}{Conclusion}{}% 17
+\BOOKMARK [1][-]{section*.18}{Appendix}{}% 18
